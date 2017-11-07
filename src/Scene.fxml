@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Button fx:id="Gen_New_Puzzle" layoutX="68.0" layoutY="67.0" mnemonicParsing="false" onAction="#gen_puzzle" text="New Puzzle" />
+      <MenuButton fx:id="Size_Selector" layoutX="68.0" layoutY="20.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="90.0">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#setSize5" text="5" />
+          <MenuItem mnemonicParsing="false" onAction="#setSize7" text="7" />
+            <MenuItem mnemonicParsing="false" onAction="#setSize9" text="9" />
+            <MenuItem mnemonicParsing="false" onAction="#setSize11" text="11" />
+        </items>
+      </MenuButton>
+      <TextArea fx:id="Puzzle" editable="false" layoutX="113.0" layoutY="292.0" prefHeight="260.0" prefWidth="260.0">
+         <font>
+            <Font size="10.0" />
+         </font></TextArea>
+      <Button fx:id="Show_Puzzle" layoutX="327.0" layoutY="20.0" mnemonicParsing="false" onAction="#show_puzzle" prefHeight="27.0" prefWidth="106.0" text="Show Puzzle" />
+      <Button fx:id="Show_Solution" layoutX="327.0" layoutY="67.0" mnemonicParsing="false" onAction="#show_solution" text="Show Solution" />
+      <TextField fx:id="Value_Display" editable="false" layoutX="86.0" layoutY="576.0" prefHeight="27.0" prefWidth="87.0" />
+      <TextField fx:id="Compute_Display" editable="false" layoutX="364.0" layoutY="576.0" prefHeight="27.0" prefWidth="87.0" />
+      <Label layoutX="46.0" layoutY="581.0" text="Value" />
+      <Label layoutX="264.0" layoutY="581.0" prefHeight="7.0" prefWidth="90.0" text="Compute Time" />
+      <AnchorPane layoutX="35.0" layoutY="110.0" prefHeight="182.0" prefWidth="122.0">
+         <children>
+            <Button fx:id="Hill_Climbing" layoutX="20.0" layoutY="3.0" mnemonicParsing="false" onAction="#hill_climb_controller" text="Hill Climbing">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Label layoutX="11.0" layoutY="85.0" text="Number of Hill Climbs">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Hill_Climbs" layoutX="19.0" layoutY="98.0" prefHeight="17.0" prefWidth="87.0" />
+            <Label layoutX="13.0" layoutY="36.0" text="Number of Iterations">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Hill_Climb_Iterations" layoutX="18.0" layoutY="52.0" prefHeight="17.0" prefWidth="87.0" />
+            <Label layoutX="10.0" layoutY="143.0" text="Probability">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Probability" layoutX="62.0" layoutY="136.0" prefHeight="17.0" prefWidth="44.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="182.0" layoutY="110.0" prefHeight="182.0" prefWidth="122.0">
+         <children>
+            <Button fx:id="Sim_Annealing" layoutX="1.0" layoutY="3.0" mnemonicParsing="false" onAction="#sim_annealing_controller" text="Simulated Annealing">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Label layoutX="10.0" layoutY="31.0" text="Number of Iterations">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Sim_Annealing_Iterations" layoutX="16.0" layoutY="44.0" prefHeight="17.0" prefWidth="87.0" />
+            <TextField fx:id="Temperature" layoutX="76.0" layoutY="93.0" prefHeight="17.0" prefWidth="44.0" />
+            <Label layoutX="8.0" layoutY="100.0" text="Temperature">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Decay_Rate" layoutX="76.0" layoutY="134.0" prefHeight="17.0" prefWidth="44.0" />
+            <Label layoutX="12.0" layoutY="141.0" text="Decay Rate">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="File_Selector" layoutX="388.0" layoutY="395.0" mnemonicParsing="false" onAction="#file_selector" text="Choose File" />
+      <AnchorPane layoutX="335.0" layoutY="110.0" prefHeight="182.0" prefWidth="122.0">
+         <children>
+            <Button fx:id="Own_Approach" layoutX="17.0" mnemonicParsing="false" onAction="#own_solution_controller" text="Own Approach">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Label layoutX="12.0" layoutY="28.0" text="Number of Iterations">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Own_Approach_Iterations" layoutX="18.0" layoutY="41.0" prefHeight="17.0" prefWidth="87.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="451.0" layoutY="590.0" text="ms" />
+   </children>
+</AnchorPane>
